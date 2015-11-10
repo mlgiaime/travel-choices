@@ -1,0 +1,14 @@
+body {
+  background-color: #9eddec;
+}
+
+h1 {
+  font-size: 300%;
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 150%;
+}
