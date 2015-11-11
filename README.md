@@ -1,1 +1,2 @@
 11/9/15-- Beginning of project planning. All images acquired, but not edited for formatting. User stories worked on. HTML page is a general skeleton. JS is happening, but not yet functional.
+11/10/15-- Borrowed code examples from Emily Aviva's gemstone project from a previous course. Most of the JS at this point was due to a lot of help from Chris Lee. I have now added most of the necessary JS and HTML. Images still need to be formatted and a vote counter needs to be put in effect.
