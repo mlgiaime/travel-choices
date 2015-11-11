@@ -1,11 +1,6 @@
-var goingAway = [];
+var trackIt = {
 
-function Adventure (place, path) {
-  this.place = place;
-  this.path = path;
-  this.votes = 0;
-  goingAway.push(this);
-}
+
 //randomizes the order of photos
 
 calcRandom = function() {
@@ -38,6 +33,13 @@ vote = function(location) {
   displayAdventures();
 }
 
+function Adventure (place, path) {
+  this.place = place;
+  this.path = path;
+  this.votes = 0;
+  goingAway.push(this);
+}
+
 //sets up the js file to pull photos from the 'images' folder to display images
 //on the page as well as adding in photo dimensions
 pic1 = document.getElementById('img');
@@ -65,25 +67,30 @@ pic2.addedEventListener('click', function() {
   });
 
 //all objects for page
-var place = new Adventure('Angkor Wat', 'images/angkorwat.jpg');
-var place = new Adventure('Arches National Park', 'images/arches.jpg');
-var place = new Adventure('Big Ben and Westminster Abbey', 'images/bigben.jpg');
-var place = new Adventure('Burj Khalifa', 'images/burjkhalifa');
-var place = new Adventure('Central Park', 'images/centralpark.jpg');
-var place = new Adventure('Roman Colosseum', 'images/colosseum.jpg');
-var place = new Adventure('Eiffel Tower', 'images/eiffeltower.jpg');
-var place = new Adventure('Mount Everest', 'images/everest.jpg');
-var place = new Adventure('Great Barrier Reef', 'images/greatreef.jpg');
-var place = new Adventure('Great Wall of China', 'images/greatwall.jpg');
-var place = new Adventure('Mount Fuji', 'images/japanfuji.jpg');
-var place = new Adventure('Machu Picchu', 'images/machupicchu.jpg');
-var place = new Adventure('Petra', 'images/petra.jpg');
-var place = new Adventure('Pyramids of Giza', 'images/pyramids.jpg');
-var place = new Adventure('Christ the Redeemer', 'images/riochrist.jpg');
-var place = new Adventure('Santorini', 'images/santorini.jpg');
-var place = new Adventure('Segrada de Familia', 'images/segrada.jpg');
-var place = new Adventure('Stonehenge', 'images/stonehenge.png');
-var place = new Adventure('St. Petersburg', 'images/stpetersburg.jpg');
-var place = new Adventure('Sydney Opera House', 'images/sydney.jpg');
-var place = new Adventure('Taj Mahal', 'images/tajmahal.jpg');
-var place = new Adventure('Yellowstone National Park', 'images/yellowstone.jpg');
+new Adventure('Angkor Wat', 'images/angkorwat.jpg');
+new Adventure('Arches National Park', 'images/arches.jpg');
+new Adventure('Big Ben and Westminster Abbey', 'images/bigben.jpg');
+new Adventure('Burj Khalifa', 'images/burjkhalifa');
+new Adventure('Central Park', 'images/centralpark.jpg');
+new Adventure('Roman Colosseum', 'images/colosseum.jpg');
+new Adventure('Eiffel Tower', 'images/eiffeltower.jpg');
+new Adventure('Mount Everest', 'images/everest.jpg');
+new Adventure('Great Barrier Reef', 'images/greatreef.jpg');
+new Adventure('Great Wall of China', 'images/greatwall.jpg');
+new Adventure('Mount Fuji', 'images/japanfuji.jpg');
+new Adventure('Machu Picchu', 'images/machupicchu.jpg');
+new Adventure('Petra', 'images/petra.jpg');
+new Adventure('Pyramids of Giza', 'images/pyramids.jpg');
+new Adventure('Christ the Redeemer', 'images/riochrist.jpg');
+new Adventure('Santorini', 'images/santorini.jpg');
+new Adventure('Segrada de Familia', 'images/segrada.jpg');
+new Adventure('Stonehenge', 'images/stonehenge.png');
+new Adventure('St. Petersburg', 'images/stpetersburg.jpg');
+new Adventure('Sydney Opera House', 'images/sydney.jpg');
+new Adventure('Taj Mahal', 'images/tajmahal.jpg');
+new Adventure('Yellowstone National Park', 'images/yellowstone.jpg');
+
+
+
+
+
