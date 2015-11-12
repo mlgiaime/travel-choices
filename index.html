@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
   <script src="Chart.js"></script>
   <meta charset='UTF-8'>
   <link rel="stylesheet" type="text/css" href="travel.css">
-  <title>World Traveler</title>
+  <title>Let's Go!</title>
 </head>
-<body>
+<body id="main">
   <header>
-    <h1 id="choice">Where would you rather travel to?</h1>
+    <h1>Which of these destinations is the most popular?</h1>
   </header>
-  <p>Which of these locations is the most popular? Click on your favorite below to give me the results I am looking for!</p>
-  <section id="pictures">
+  <p>Choose your preferred vacation destination from each pair!</p>
+  <canvas id="tally" width="350px" height="550px"></canvas>
+  <section>
     <figure id="location1"></figure>
-    <h3 id="location1header"></h3>
+    <h3 id="location1placeName"></h3>
     <img id="location1photo">
     <figure id="location2"></figure>
-    <h3 id="location2header"></h3>
+    <h3 id="location2placeName"></h3>
     <img id="location2photo">
   </section>
-  <canvas id="tally" width="35%" height="35%"></canvas>  <script type="text/javascript" src="travel.js"></script>
+  <script type="text/javascript" src="travel.js"></script>
 </body>
 </html>
 
