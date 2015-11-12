@@ -61,7 +61,7 @@ function VacationDestination (place, path) {
 new VacationDestination('Dubai', 'images/dubai.jpg')
 new VacationDestination('Angkor Wat', 'images/angkorwat.jpg');
 new VacationDestination('Arches National Park', 'images/arches.jpg');
-new VacationDestination('Big Ben and Westminster Abbey', 'images/bigben.jpg');
+new VacationDestination('Big Ben', 'images/bigben.jpg');
 new VacationDestination('Central Park', 'images/centralpark.jpg');
 new VacationDestination('Roman Colosseum', 'images/colosseum.jpg');
 new VacationDestination('Eiffel Tower', 'images/eiffeltower.jpg');
@@ -79,7 +79,7 @@ new VacationDestination('Stonehenge', 'images/stonehenge.png');
 new VacationDestination('St. Petersburg', 'images/stpetersburg.jpg');
 new VacationDestination('Sydney Opera House', 'images/sydney.jpg');
 new VacationDestination('Taj Mahal', 'images/tajmahal.jpg');
-new VacationDestination('Yellowstone National Park', 'images/yellowstone.jpg');
+new VacationDestination('Yellowstone', 'images/yellowstone.jpg');
 new VacationDestination('Istanbul', 'images/istanbul.jpg');
 new VacationDestination('Bora Bora', 'images/borabora.jpg')
 
