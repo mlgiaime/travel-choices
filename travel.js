@@ -32,8 +32,11 @@ var tracker = {
     location2 = tracker.calcSecondPlace(location1);
     tracker.displayVacationDestinations();
     chart = new Chart(context).Bar(barData);
+
+    localStorage.setItem('barData', JSON.stringify(barData));
   }
 };
+
 
 var barData = {
   labels: [],
@@ -46,6 +49,57 @@ var barData = {
   ]
 }
 
+function checkLocal() {
+  if (localStorage.barData && localStorage.placesToSee) {
+    barData = JSON.parse(localStorage.getItem('barData'));
+    placesToSee = JSON.parse(localStorage.getItem('placesToSee'));
+    console.log('found and built data');
+    chart = new Chart(context).Bar(barData);
+  } else {
+    barData = {
+      labels:[],
+      datasets: [
+        {
+          label:'Votes',
+          fillColor:'#382765',
+          strokeColor: '#AAAAAA',
+          highlightFill: '#AAAAAA',
+          highlightStroke: '#AAAAAA',
+          data: []
+        }
+      ]
+    }
+    console.log('did NOT find data, built new data');
+    //localStorage.setItem('barData', JSON.stringify(barData));
+
+    new VacationDestination('Dubai', 'images/dubai.jpg');
+    new VacationDestination('Angkor Wat', 'images/angkorwat.jpg');
+    new VacationDestination('Arches National Park', 'images/arches.jpg');
+    new VacationDestination('Big Ben', 'images/bigben.jpg');
+    new VacationDestination('Central Park', 'images/centralpark.jpg');
+    new VacationDestination('Roman Colosseum', 'images/colosseum.jpg');
+    new VacationDestination('Eiffel Tower', 'images/eiffeltower.jpg');
+    new VacationDestination('Mount Everest', 'images/everest.jpg');
+    new VacationDestination('Great Barrier Reef', 'images/greatreef.jpg');
+    new VacationDestination('Great Wall of China', 'images/greatwall.jpg');
+    new VacationDestination('Mount Fuji', 'images/japanfuji.jpg');
+    new VacationDestination('Machu Picchu', 'images/machupicchu.jpg');
+    new VacationDestination('Petra', 'images/petra.jpg');
+    new VacationDestination('Pyramids of Giza', 'images/pyramids.jpg');
+    new VacationDestination('Christ the Redeemer', 'images/riochrist.jpg');
+    new VacationDestination('Santorini', 'images/santorini.jpg');
+    new VacationDestination('Segrada de Familia', 'images/segrada.jpg');
+    new VacationDestination('Stonehenge', 'images/stonehenge.png');
+    new VacationDestination('St. Petersburg', 'images/stpetersburg.jpg');
+    new VacationDestination('Sydney Opera House', 'images/sydney.jpg');
+    new VacationDestination('Taj Mahal', 'images/tajmahal.jpg');
+    new VacationDestination('Yellowstone', 'images/yellowstone.jpg');
+    new VacationDestination('Istanbul', 'images/istanbul.jpg');
+    new VacationDestination('Bora Bora', 'images/borabora.jpg');
+
+    localStorage.setItem('placesToSee', JSON.stringify(placesToSee));
+  }
+};
   var context = document.getElementById('tally').getContext('2d');
   var chart = new Chart(context).Bar(barData);
 
@@ -58,30 +112,7 @@ function VacationDestination (place, path) {
   placesToSee.push(this);
 }
 
-new VacationDestination('Dubai', 'images/dubai.jpg')
-new VacationDestination('Angkor Wat', 'images/angkorwat.jpg');
-new VacationDestination('Arches National Park', 'images/arches.jpg');
-new VacationDestination('Big Ben', 'images/bigben.jpg');
-new VacationDestination('Central Park', 'images/centralpark.jpg');
-new VacationDestination('Roman Colosseum', 'images/colosseum.jpg');
-new VacationDestination('Eiffel Tower', 'images/eiffeltower.jpg');
-new VacationDestination('Mount Everest', 'images/everest.jpg');
-new VacationDestination('Great Barrier Reef', 'images/greatreef.jpg');
-new VacationDestination('Great Wall of China', 'images/greatwall.jpg');
-new VacationDestination('Mount Fuji', 'images/japanfuji.jpg');
-new VacationDestination('Machu Picchu', 'images/machupicchu.jpg');
-new VacationDestination('Petra', 'images/petra.jpg');
-new VacationDestination('Pyramids of Giza', 'images/pyramids.jpg');
-new VacationDestination('Christ the Redeemer', 'images/riochrist.jpg');
-new VacationDestination('Santorini', 'images/santorini.jpg');
-new VacationDestination('Segrada de Familia', 'images/segrada.jpg');
-new VacationDestination('Stonehenge', 'images/stonehenge.png');
-new VacationDestination('St. Petersburg', 'images/stpetersburg.jpg');
-new VacationDestination('Sydney Opera House', 'images/sydney.jpg');
-new VacationDestination('Taj Mahal', 'images/tajmahal.jpg');
-new VacationDestination('Yellowstone', 'images/yellowstone.jpg');
-new VacationDestination('Istanbul', 'images/istanbul.jpg');
-new VacationDestination('Bora Bora', 'images/borabora.jpg')
+checkLocal();
 
 var location1 = tracker.calcRandom();
 var location2 = tracker.calcSecondPlace(location1);
@@ -101,6 +132,8 @@ pic1.addEventListener('click', function() {
 pic2.addEventListener('click', function() {
   tracker.vote(location2);
   });
+
+
 
 tracker.displayVacationDestinations();
 
